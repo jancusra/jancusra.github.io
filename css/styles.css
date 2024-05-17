@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "CharkaPetch";
+  src: URL("../fonts/ChakraPetch-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CharkaPetch";
+  src: URL("../fonts/ChakraPetch-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  font-family: "CharkaPetch";
+  background-image: url("../images/code-background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+body h1,
+.description {
+  text-align: center;
+}
