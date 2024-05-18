@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Examples of work</title>
+    <title>Examples of my work</title>
+    <link rel="stylesheet" type="text/css" href="libs/photoswipe/photoswipe.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <h1>Rastislav Jančuš - Full-stack Web Developer</h1>
-    <div class="description">(site is still under construction ...)</div>
+    <h1>Rastislav Jančuš { Full-stack Web Developer }</h1>
+    <div class="description">Here are some examples of my work (web site is still under construction ...)</div>
+    <div class="content">
+      <div id="flystork-gallery" class="pswp-gallery pswp-gallery--single-column">
+        <a href="images/flystork/01.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+          <img class="thumbnail" src="images/flystork/01.png" alt="" />
+        </a>
+        <a href="images/flystork/02.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/03.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/04.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/05.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/06.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/07.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/flystork/08.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+      </div>
+      <div id="menscrisis-gallery" class="pswp-gallery pswp-gallery--single-column">
+        <a href="images/menscrisis/01.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+          <img class="thumbnail" src="images/menscrisis/01.png" alt="" />
+        </a>
+        <a href="images/menscrisis/02.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/menscrisis/03.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+        <a href="images/menscrisis/04.png" 
+          data-pswp-width="2560" 
+          data-pswp-height="1440" 
+          target="_blank">
+        </a>
+      </div>
+    </div>
+
+    <script type="module">
+      import PhotoSwipeLightbox from "./libs/photoswipe/photoswipe-lightbox.esm.min.js";
+
+      const flystork = new PhotoSwipeLightbox({
+        gallery: "#flystork-gallery",
+        children: "a",
+        pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
+      });
+
+      flystork.init();
+
+      const menscrisis = new PhotoSwipeLightbox({
+        gallery: "#menscrisis-gallery",
+        children: "a",
+        pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
+      });
+
+      menscrisis.init();
+    </script>
   </body>
 </html>
