@@ -28,11 +28,26 @@ body h1,
   padding: 32px 0 0;
 }
 
-.pswp-gallery {
+.gallery-element {
   display: inline-block;
+  padding: 24px 0 0;
+}
+
+.gallery-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 0 10px;
+  color: #2874a6;
+}
+
+.pswp-gallery {
   padding: 0 10px 0;
 }
 
 .thumbnail {
   width: 720px;
+}
+
+.project-link {
+  font-size: 20px;
 }
