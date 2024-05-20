@@ -18,9 +18,19 @@ body {
   background-size: 100% 100%;
 }
 
-body h1,
+body h1 {
+  text-align: center;
+}
+
 .description {
   text-align: center;
+  font-size: 20px;
+}
+
+.description-note {
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 0 0;
 }
 
 .content {
