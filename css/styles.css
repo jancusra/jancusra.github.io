@@ -22,20 +22,28 @@ body h1 {
   text-align: center;
 }
 
-.description {
+.description-content {
   text-align: center;
+}
+
+.description {
   font-size: 20px;
 }
 
 .description-note {
-  text-align: center;
   font-size: 16px;
   padding: 12px 0 0;
 }
 
+.github-icon {
+  width: 32px;
+  height: 32px;
+  margin: 10px 0 0;
+}
+
 .content {
   text-align: center;
-  padding: 32px 0 0;
+  padding: 20px 0 0;
 }
 
 .gallery-element {
@@ -55,9 +63,15 @@ body h1 {
 }
 
 .thumbnail {
-  width: 720px;
+  max-width: 720px;
 }
 
 .project-link {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .thumbnail {
+    width: 100%;
+  }
 }
