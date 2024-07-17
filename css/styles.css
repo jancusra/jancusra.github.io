@@ -24,6 +24,10 @@ body h1 {
   margin: 0.6em 0 0.2em;
 }
 
+a {
+  text-decoration: none;
+}
+
 .title-note {
   font-weight: bold;
   font-size: 16px;
@@ -44,6 +48,10 @@ body h1 {
   margin: 10px 0 0;
 }
 
+.code-examples {
+  color: #000;
+}
+
 .content {
   text-align: center;
   padding: 20px 0 0;
@@ -52,6 +60,7 @@ body h1 {
 .gallery-element {
   display: inline-block;
   padding: 24px 0 0;
+  vertical-align: top;
 }
 
 .gallery-title {
