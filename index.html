@@ -8,7 +8,7 @@
     <meta name="author" content="Rastislav Jancus">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="libs/photoswipe/photoswipe.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=004">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=005">
   </head>
   <body>
     <h1>Rastislav Jančuš { Full Stack Web Developer }</h1>
@@ -199,6 +199,44 @@
         </div>
         <a href="https://shop.menscrisis.com/" class="project-link" target="_blank">[Project is available online]</a>
       </div>
+      <h2>Other skills</h2>
+      <div class="gallery-element">
+        <div class="gallery-title">Full Stack REST API experiences [by software Insomnia]</div>
+        <div id="rest-api-gallery" class="pswp-gallery pswp-gallery--single-column">
+          <a href="images/rest-api/01.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="1440" 
+            target="_blank">
+            <img class="thumbnail" src="images/rest-api/01.png" alt="Full Stack REST API experiences" />
+          </a>
+          <a href="images/rest-api/02.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="1440" 
+            target="_blank">
+          </a>
+        </div>
+      </div>
+      <div class="gallery-element">
+        <div class="gallery-title">Created vector glyph (font) icon library [by soft. FontForge]</div>
+        <div id="glyph-icons-gallery" class="pswp-gallery pswp-gallery--single-column">
+          <a href="images/glyph-icons/01.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="1440" 
+            target="_blank">
+            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" />
+          </a>
+          <a href="images/glyph-icons/02.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="1440" 
+            target="_blank">
+          </a>
+          <a href="images/glyph-icons/03.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="1440" 
+            target="_blank">
+          </a>
+        </div>
+      </div>
     </div>
 
     <script type="module">
@@ -231,6 +269,20 @@
         pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
       });
       menscrisis.init();
+
+      const rest_api = new PhotoSwipeLightbox({
+        gallery: "#rest-api-gallery",
+        children: "a",
+        pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
+      });
+      rest_api.init();
+
+      const glyph_icons = new PhotoSwipeLightbox({
+        gallery: "#glyph-icons-gallery",
+        children: "a",
+        pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
+      });
+      glyph_icons.init();
     </script>
   </body>
 </html>
