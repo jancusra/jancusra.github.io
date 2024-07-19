@@ -30,11 +30,11 @@
         <br/>Each UI shown in the images has been implemented and fully functional.
       </div>
       <div class="profile-links">
-        <a href="https://github.com/jancusra" target="_blank">
+        <a href="https://github.com/jancusra" target="_blank" onclick="link_click('GitHub')">
           <img class="profile-icon" src="images/github.svg" alt="Examples of my code" />
           <div class="profile-text">Examples of my code</div>
         </a>
-        <a href="https://linkedin.com/in/jancusra" target="_blank">
+        <a href="https://linkedin.com/in/jancusra" target="_blank" onclick="link_click('LinkedIn')">
           <img class="profile-icon" src="images/linkedin.svg" alt="My LinkedIn profile" />
           <div class="profile-text">My LinkedIn profile</div>
         </a>
@@ -231,7 +231,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('GLYPHS')" />
+            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('GlyphIcons')" />
           </a>
           <a href="images/glyph-icons/02.png" 
             data-pswp-width="2560" 
@@ -293,6 +293,11 @@
       glyph_icons.init();
     </script>
     <script type="text/javascript">
+      function link_click(link_id) {
+        gtag("event", "link_click", {
+          "id": link_id
+        });
+      }
       function thumbnail_click(thumb_id) {
         gtag("event", "thumb_view", {
           "id": thumb_id
