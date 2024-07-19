@@ -15,7 +15,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0HNTZMB1T1');
     </script>
   </head>
@@ -49,7 +48,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1328" 
             target="_blank">
-            <img class="thumbnail" src="images/safetica-old/01.png" alt="Example of implemented WebSafetica v1 web design" />
+            <img class="thumbnail" src="images/safetica-old/01.png" alt="Example of implemented WebSafetica v1 web design" onclick="thumbnail_click('WebSafeticaV1')" />
           </a>
           <a href="images/safetica-old/02.png" 
             data-pswp-width="2560" 
@@ -95,7 +94,7 @@
             data-pswp-width="3840" 
             data-pswp-height="1920" 
             target="_blank">
-            <img class="thumbnail" src="images/safetica/01.png" alt="Example of implemented WebSafetica web design" />
+            <img class="thumbnail" src="images/safetica/01.png" alt="Example of implemented WebSafetica web design" onclick="thumbnail_click('WebSafeticaV2')" />
           </a>
           <a href="images/safetica/02.png" 
             data-pswp-width="3840" 
@@ -136,7 +135,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/flystork/01.png" alt="Example of implemented Flystork web design" />
+            <img class="thumbnail" src="images/flystork/01.png" alt="Example of implemented Flystork web design" onclick="thumbnail_click('Flystork')" />
           </a>
           <a href="images/flystork/02.png" 
             data-pswp-width="2560" 
@@ -188,7 +187,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/menscrisis/01.png" alt="Example of implemented Menscrisis web design" />
+            <img class="thumbnail" src="images/menscrisis/01.png" alt="Example of implemented Menscrisis web design" onclick="thumbnail_click('Menscrisis')" />
           </a>
           <a href="images/menscrisis/02.png" 
             data-pswp-width="2560" 
@@ -216,7 +215,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/rest-api/01.png" alt="Full Stack REST API experiences" />
+            <img class="thumbnail" src="images/rest-api/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('REST-API')" />
           </a>
           <a href="images/rest-api/02.png" 
             data-pswp-width="2560" 
@@ -226,13 +225,13 @@
         </div>
       </div>
       <div class="gallery-element">
-        <div class="gallery-title">Created vector glyph (font) icon library [by soft. FontForge]</div>
+        <div class="gallery-title">Created vector glyph (font) icon library [by software FontForge]</div>
         <div id="glyph-icons-gallery" class="pswp-gallery pswp-gallery--single-column">
           <a href="images/glyph-icons/01.png" 
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" />
+            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('GLYPHS')" />
           </a>
           <a href="images/glyph-icons/02.png" 
             data-pswp-width="2560" 
@@ -292,13 +291,13 @@
         pswpModule: () => import("./libs/photoswipe/photoswipe.esm.min.js")
       });
       glyph_icons.init();
-
-      document.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Log the clicked element in the console
-        console.log(event.target);
-      }, false);
+    </script>
+    <script type="text/javascript">
+      function thumbnail_click(thumb_id) {
+        gtag("event", "thumb_view", {
+          "id": thumb_id
+        });
+      }
     </script>
   </body>
 </html>
