@@ -30,11 +30,11 @@
         <br/>Each UI shown in the images has been implemented and fully functional.
       </div>
       <div class="profile-links">
-        <a href="https://github.com/jancusra" target="_blank" onclick="link_click('GitHub')">
+        <a href="https://github.com/jancusra" target="_blank" onclick="ga_event('link_GitHub')">
           <img class="profile-icon" src="images/github.svg" alt="Examples of my code" />
           <div class="profile-text">Examples of my code</div>
         </a>
-        <a href="https://linkedin.com/in/jancusra" target="_blank" onclick="link_click('LinkedIn')">
+        <a href="https://linkedin.com/in/jancusra" target="_blank" onclick="ga_event('link_LinkedIn')">
           <img class="profile-icon" src="images/linkedin.svg" alt="My LinkedIn profile" />
           <div class="profile-text">My LinkedIn profile</div>
         </a>
@@ -48,7 +48,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1328" 
             target="_blank">
-            <img class="thumbnail" src="images/safetica-old/01.png" alt="Example of implemented WebSafetica v1 web design" onclick="thumbnail_click('WebSafeticaV1')" />
+            <img class="thumbnail" src="images/safetica-old/01.png" alt="Example of implemented WebSafetica v1 web design" onclick="ga_event('thumb_WebSafeticaV1')" />
           </a>
           <a href="images/safetica-old/02.png" 
             data-pswp-width="2560" 
@@ -94,7 +94,7 @@
             data-pswp-width="3840" 
             data-pswp-height="1920" 
             target="_blank">
-            <img class="thumbnail" src="images/safetica/01.png" alt="Example of implemented WebSafetica web design" onclick="thumbnail_click('WebSafeticaV2')" />
+            <img class="thumbnail" src="images/safetica/01.png" alt="Example of implemented WebSafetica web design" onclick="ga_event('thumb_WebSafeticaV2')" />
           </a>
           <a href="images/safetica/02.png" 
             data-pswp-width="3840" 
@@ -135,7 +135,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/flystork/01.png" alt="Example of implemented Flystork web design" onclick="thumbnail_click('Flystork')" />
+            <img class="thumbnail" src="images/flystork/01.png" alt="Example of implemented Flystork web design" onclick="ga_event('thumb_Flystork')" />
           </a>
           <a href="images/flystork/02.png" 
             data-pswp-width="2560" 
@@ -187,7 +187,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/menscrisis/01.png" alt="Example of implemented Menscrisis web design" onclick="thumbnail_click('Menscrisis')" />
+            <img class="thumbnail" src="images/menscrisis/01.png" alt="Example of implemented Menscrisis web design" onclick="ga_event('thumb_Menscrisis')" />
           </a>
           <a href="images/menscrisis/02.png" 
             data-pswp-width="2560" 
@@ -215,7 +215,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/rest-api/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('REST-API')" />
+            <img class="thumbnail" src="images/rest-api/01.png" alt="Full Stack REST API experiences" onclick="ga_event('thumb_REST-API')" />
           </a>
           <a href="images/rest-api/02.png" 
             data-pswp-width="2560" 
@@ -231,7 +231,7 @@
             data-pswp-width="2560" 
             data-pswp-height="1440" 
             target="_blank">
-            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" onclick="thumbnail_click('GlyphIcons')" />
+            <img class="thumbnail" src="images/glyph-icons/01.png" alt="Full Stack REST API experiences" onclick="ga_event('thumb_GlyphIcons')" />
           </a>
           <a href="images/glyph-icons/02.png" 
             data-pswp-width="2560" 
@@ -292,17 +292,10 @@
       });
       glyph_icons.init();
     </script>
+    
     <script type="text/javascript">
-      function link_click(link_id) {
-        gtag("event", "link_click", {
-          "id": link_id
-        });
-      }
-      
-      function thumbnail_click(thumb_id) {
-        gtag("event", "thumb_view", {
-          "id": thumb_id
-        });
+      function ga_event(event_id) {
+        gtag("event", event_id);
       }
     </script>
   </body>
