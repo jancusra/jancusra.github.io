@@ -1,21 +1,23 @@
 @font-face {
-  font-family: "CharkaPetch";
-  src: URL("../fonts/ChakraPetch-Regular.ttf") format("truetype");
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "CharkaPetch";
-  src: URL("../fonts/ChakraPetch-Bold.ttf") format("truetype");
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Bold.ttf") format("truetype");
   font-weight: bold;
+  font-display: swap;
 }
 
 body {
-  font-family: "CharkaPetch";
+  font-family: "ChakraPetch";
   background-image: url("../images/code-background.png");
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
 }
 
@@ -77,6 +79,7 @@ a {
 .gallery-title {
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
   padding: 0 0 10px;
   color: #2874a6;
 }
@@ -87,6 +90,7 @@ a {
 
 .thumbnail {
   max-width: 720px;
+  height: auto;
 }
 
 .project-link {
