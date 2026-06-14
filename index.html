@@ -25,7 +25,8 @@
       gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0HNTZMB1T1";
       document.head.appendChild(gaScript);
       gtag('js', new Date());
-      gtag('config', 'G-0HNTZMB1T1');
+      // github.io is a public suffix, so cookie_domain 'auto' fails - pin it to the full host
+      gtag('config', 'G-0HNTZMB1T1', { cookie_domain: location.hostname });
     }
   </script>
 </head>
